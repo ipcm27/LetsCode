@@ -1,0 +1,57 @@
+
+Body{
+    background-color:  #007ca1;
+}
+b{
+    color:antiquewhite;
+}
+a{
+    color:#33CCFF;
+}
+
+p{
+    color:whitesmoke;
+}
+
+.Top{
+    background-image: url("img/bluesky.gif");
+    background-repeat: repeat;
+    background-size: 416px;
+    background-blend-mode: color;
+    border-style: solid;
+    border-color: #68cce6;
+   
+}
+
+.topTableImg{
+    margin-left: auto;
+    margin-right: auto;
+}
+.navBar{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.Table1{
+    margin-left: auto;
+    margin-right: auto;
+
+}
+.BehavelikeAnItem{
+    background-color: #666666;
+    width: 500px;
+}
+
+#Ie{
+    color:#213374;
+    font-size: 72px;
+    display:inline-flexbox; 
+    text-align: center; 
+}
+
+#DuckGo{
+    color:aliceblue;
+    text-align: center;
+}
+
+   
