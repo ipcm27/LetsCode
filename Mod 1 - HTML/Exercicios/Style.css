@@ -9,6 +9,10 @@ a{
     color:#33CCFF;
 }
 
+p{
+    color:whitesmoke;
+}
+
 .Top{
     background-image: url("img/fire-flames.gif");
     background-repeat: repeat;
