@@ -1,20 +1,26 @@
+
+Body{
+    background-color:  #A82626;
+}
+b{
+    color:antiquewhite;
+}
+
 .Top{
     background-image: url("img/fire-flames.gif");
     background-repeat: repeat;
     background-size: 416px;
+    background-blend-mode: color;
     border-style: solid;
     border-color: #490204;
    
-}
-Body{
-    background-color:  #A82626;
 }
 
 .topTableImg{
     margin-left: auto;
     margin-right: auto;
 }
-.navBarImg{
+.navBar{
     margin-left: auto;
     margin-right: auto;
 }
