@@ -5,6 +5,9 @@ Body{
 b{
     color:antiquewhite;
 }
+a{
+    color:#33CCFF;
+}
 
 .Top{
     background-image: url("img/fire-flames.gif");
