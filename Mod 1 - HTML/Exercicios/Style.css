@@ -1,0 +1,44 @@
+.Top{
+    background-image: url("img/fire-flames.gif");
+    background-repeat: repeat;
+    background-size: 416px;
+    border-style: solid;
+    border-color: #490204;
+   
+}
+Body{
+    background-color:  #A82626;
+}
+
+.topTableImg{
+    margin-left: auto;
+    margin-right: auto;
+}
+.navBarImg{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.Table1{
+    margin-left: auto;
+    margin-right: auto;
+
+}
+.BehavelikeAnItem{
+    background-color: #666666;
+    width: 500px;
+}
+
+#Ie{
+    color:#FFFF00;
+    font-size: 72px;
+    display:inline-flexbox; 
+    text-align: center; 
+}
+
+#DuckGo{
+    color:aliceblue;
+    text-align: center;
+}
+
+   
