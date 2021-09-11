@@ -14,7 +14,7 @@ p{
 }
 
 .Top{
-    background-image: url("img/fire-flames.gif");
+    background-image: url("../img/fire-flames.gif");
     background-repeat: repeat;
     background-size: 416px;
     background-blend-mode: color;
