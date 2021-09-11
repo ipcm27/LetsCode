@@ -1,0 +1,29 @@
+body {
+    background-color: #94D2BD;
+}
+
+hr {   
+    /*border-style: none;*/
+    height: 2px;
+    width: 10%;
+    border-style: dotted none none ;
+    border-color: #0A9396;
+    border-width: 5px;
+}
+
+h3{
+    color: #001219;
+}
+
+table{
+    background-color: #0A9396;
+    border-radius: 10%;
+}
+
+ul{
+    background-color: #0A9396;
+    width:20%;
+    height: 100px;
+    
+    border-radius: 20%; 
+}
