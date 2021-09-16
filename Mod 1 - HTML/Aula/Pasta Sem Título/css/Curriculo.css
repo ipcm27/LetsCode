@@ -1,0 +1,81 @@
+body{
+    text-align: center;
+    margin:0;
+    font-family: "Merriweather", serif;
+}
+
+h1{
+    color: #75C5C5;
+    padding-top:80px;
+    /* font-size:562%; */ 
+    font-size: 5.625rem; /* 16px = 100%rem */
+    font-family: 'Sacramento', cursive;  
+}
+
+
+h2{
+    color: #75C5C5;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#top-cloud{
+    position: absolute;
+    right:300px;
+    top:50px;
+}
+
+#bottom-cloud{
+    position: absolute;
+    left:300px;
+    bottom:300px;
+}
+
+#mountain{
+   
+}
+
+.top-container{
+    background-color: #EAF6F6;
+    position:relative;
+    padding-top: 30px;
+}
+
+.profilePicture{
+    height:200px;
+    width:200px;
+    padding-top: 20px;
+}
+
+.computerimage{
+    width:25%;
+    border-radius: 100%;
+    float: left;
+    margin-right: 30px;
+}
+
+.chilliimage{
+    width:25%;
+    border-radius: 100%;
+    float: right;
+    margin-left: 30px;
+}
+
+.bottom-container{
+    background-color: #66BFBF;
+}
+
+.footer-link{
+    color: #11999E;
+}
+
+.rights{
+    color: #EAF6F6;
+    size:0.1%;
+}
+
+.skill-row{
+    width:50%;
+    margin: 100px auto 100px auto;
+    text-align: left;
+    line-height: 2;
+}
