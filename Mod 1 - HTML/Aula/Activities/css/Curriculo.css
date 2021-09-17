@@ -1,0 +1,141 @@
+body{
+    text-align: center;
+    margin:0;
+    font-family: "Merriweather", serif;
+}
+
+h1{
+    color: #75C5C5;
+    padding-top:80px;
+    /* font-size:562%; */ 
+    font-size: 5.625rem; /* 16px = 100%rem */
+    font-family: 'Sacramento', cursive;  
+}
+p{
+color:#40514E;
+
+}
+
+
+h2{
+    color: #75C5C5;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+}
+
+h3{
+    color: #11999E;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    /*font-weight: Medium 500;*/
+}
+
+#top-cloud{
+    position: absolute;
+    right:300px;
+    top:50px;
+}
+
+#bottom-cloud{
+    position: absolute;
+    left:300px;
+    bottom:300px;
+}
+
+#mountain{
+   
+}
+
+.top-container{
+    background-color: #EAF6F6;
+    position:relative;
+    padding-top: 30px;
+}
+
+.profilePicture{
+    height:150px;
+    width:150px;
+
+    padding-top: 20px;
+}
+
+.profile{
+    width:25%;
+    margin: 25px auto 25px auto;
+    text-align: center;
+    line-height: 2;
+}
+
+.horizontal_dotted_line{
+    border-bottom: 10px dotted #EAF6F6;
+    width: 100px;
+    margin: 50px auto 50px auto;
+    text-align: center;
+  } 
+
+.skills{
+    margin: 50px auto 50px auto;
+}
+
+.skill-row{
+    width:50%;
+    margin: 100px auto 100px auto;
+    text-align: left;
+    line-height: 2;
+}
+
+.computerimage{
+    width:25%;
+    max-width: 200px;
+    max-height: 200px;
+    border-radius: 100%;
+    float: left;
+    margin-right: 30px;
+}
+
+.chilliimage{
+    width:25%;
+    max-width: 200px;
+    max-height: 200px;
+    border-radius: 100%;
+    float: right;
+    margin-left: 30px;
+}
+
+.contact-me{
+    width:40%;
+    margin: 100px auto 100px auto;
+    text-align: center;
+    line-height: 2;
+}
+.btn{
+    background-color: #0DBDC3;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 2;
+    color:#EAF6F6;
+    padding:10px 20px 10px 20px;
+    border-radius: 5%;
+    border: 1px solid #25A2A7;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    text-decoration: none;
+
+}
+
+
+.bottom-container{
+    background-color: #66BFBF;
+    padding: 25px 25px 25px 25px ;
+}
+
+.footer-link{
+    color: #11999E;
+    margin:25px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.rights{
+    font-family: 'Montserrat', sans-serif;
+    margin: 15px 0 0 0;
+    color: #EAF6F6;
+    font-size:0.5rem;
+}
