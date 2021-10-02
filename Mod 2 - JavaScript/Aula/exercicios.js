@@ -1,4 +1,3 @@
-
 //3
 function calcularVolumePiscina(profundiade,largura,altura,alturalamina){
 volumePiscinaEmM3 = ((profundiade-alturalamina)* (largura* altura));
@@ -9,12 +8,12 @@ return volumePiscinaEmLitros;
 
 function calcularProdutoLimpaPiscina(volumePiscinaEmLitros){
     qtdProdutoLimpaPiscina=(volumePiscinaEmLitros/1000)*0.0015
-    
+
     console.log(`${qtdProdutoLimpaPiscina} litros do produto limpa piscina da estrela devem ser aplicados
     ou ${qtdProdutoLimpaPiscina*1000}ml do produto`) 
 
     return(qtdProdutoLimpaPiscina)
- 
+
 }
 
 calcularVolumePiscina(1.7,3,5,0.5)
@@ -46,5 +45,6 @@ const weekDays = [
 
 const firstValue = weekDays.shift()
 console.log(firstValue)
+
 
 
