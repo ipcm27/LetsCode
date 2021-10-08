@@ -1,4 +1,4 @@
-// Aula 1
+// Aula 1 - 17/09 - 
 
 // let javascript = "javascript é top";
 // if (javascript === "javascript é top") alert("Javascript é mara");

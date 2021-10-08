@@ -1,3 +1,11 @@
+// INTERPOLAÇÃO DE STRING
+
+const myInterpolation = `Sou ${primeiroNome}, uma ${profissao} de ${
+    anoAtual - anoNascimento
+  } anos.`;
+  
+  console.log(myInterpolation);
+
 //condicionais
 
 const pesoMark =78;

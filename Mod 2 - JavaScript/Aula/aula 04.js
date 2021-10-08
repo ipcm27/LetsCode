@@ -1,3 +1,4 @@
+// 24/09/2021 - Sexta-feira
 // DESESTRUTURAÇÃO DE ARRAYS
 
 const arr = [2, 3, 4];
@@ -111,11 +112,11 @@ console.log(letras.join(" * "));
 //Objetos
 
 const person = {
-    firstName: "Igor",
-    lastName: "Pierre",
-    birthyear: 1996,
+    firstName: "Mike",
+    lastName: "Wasowski", 
+    birthyear: 1990,
     job: "student",
-    friends: ["Levi", "Matheus", "Joao"],
+    friends: ["Sulliver", "Waterloose", "Joao"],
     hascarteiraMotorista: true,
     calcAge: function(){
         console.log(this);
@@ -130,12 +131,12 @@ const person = {
 
 // MÉTODOS DE OBJETOS
 
-const larissaObj = {
-    firstName: "Larissa",
-    lastName: "Queiroz",
-    birthYear: 1993,
-    job: "professora",
-    friends: ["Natalia", "Camila", "Pedro"],
+const person = {
+    firstName: "Silvia",
+    lastName: "Bondelaire",
+    birthYear: 2004,
+    job: "scientist",
+    friends: ["Warwick", "Oriana", "Tristana"],
     hasCarteiraMotorista: true,
     calcAge: function () {
       // console.log(this);
@@ -143,7 +144,7 @@ const larissaObj = {
     }, // qualquer função agregada a um objeto é chamada de método.
   };
   
-  console.log(larissaObj.calcAge());
-  larissaObj.calcAge();
-  larissaObj.calcAge();
-  larissaObj.calcAge();
+  console.log(person.calcAge());
+  person.calcAge();
+  person.calcAge();
+  person.calcAge();
