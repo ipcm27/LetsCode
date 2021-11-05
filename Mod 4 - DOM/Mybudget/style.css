@@ -1,0 +1,328 @@
+@font-face {
+  font-family: "Gilroy";
+  src: url("font/Gilroy-Regular.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gilroy Bold";
+  src: url("font/Gilroy-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;900&display=swap");
+
+* {
+  font-family: "Gilroy";
+  list-style: none;
+  text-decoration: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.budget-container {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  background-image: linear-gradient(to right, #5f676d, #a7adb2);
+}
+
+/*/////////////   HEADER   /////////////*/
+
+.budget-header {
+  display: block;
+  width: 95%;
+  background-color: #3794ca;
+  padding-bottom: 15px;
+  margin-top: 5px;
+  margin-left: 50px;
+  margin-bottom: 15px;
+  border-radius: 30px;
+}
+
+.budget-header .balance {
+  margin-top: 45px;
+  margin-left: 20px;
+}
+
+.budget-header .balance .title {
+  padding-top: 30px;
+  color: #fff;
+  font-size: 1em;
+  font-family: "Gilroy Bold";
+}
+
+.budget-header .balance .value {
+  color: #fff;
+  font-size: 2em;
+  margin-top: 10px;
+  font-family: "Gilroy Bold";
+}
+
+.budget-header .account {
+  display: block;
+  width: 100%;
+  margin: 35px auto 0;
+  line-height: 1.7em;
+  text-align: start;
+}
+
+.budget-header .account .income,
+.chart,
+.outcome {
+  height: 50px;
+  display: inline-block;
+  width: 100px;
+  margin-left: 25px;
+  vertical-align: middle;
+}
+
+.budget-header .account .income .title {
+  color: #fff;
+  opacity: 0.5;
+}
+
+.budget-header .account .income .income-total {
+  color: #fff;
+  font-family: "Gilroy Bold";
+}
+
+.budget-header .account .outcome .title {
+  color: #fff;
+  opacity: 0.5;
+}
+.budget-header .account .outcome .outcome-total {
+  color: #bb2d3b;
+  font-family: "Gilroy Bold";
+}
+
+.budget-header .account .income .income-total {
+  color: #90d8a0;
+  font-family: "Gilroy Bold";
+}
+
+.cards-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.cards-container #container2 {
+  display: flex;
+  flex-direction: row;
+  margin: 25px;
+}
+
+/*/ ////////////   BUDGET DASHBOARD    /////////////*/
+
+.budget-dashboard {
+  display: block;
+  width: auto;
+  height: fit-content;
+  padding-bottom: 15px;
+  background-color: #fff;
+  margin-top: 5px;
+  margin-left: 50px;
+  border-radius: 30px;
+}
+
+.budget-dashboard .dash-title {
+  display: inline-block;
+  color: #3593ca;
+  font-size: 1.7em;
+  margin-left: 20px;
+  margin-top: 30px;
+  font-family: "Gilroy Bold";
+}
+
+.toggle {
+  display: block;
+  margin-top: 30px;
+  margin-left: 20px;
+}
+
+.toggle .tab {
+  display: inline-block;
+  cursor: pointer;
+  font-size: 1.1em;
+  color: #3593ca;
+  font-family: "Gilroy Bold";
+  opacity: 0.4;
+}
+
+.toggle .tab {
+  margin-left: 10px;
+}
+
+.active {
+  opacity: 1 !important;
+}
+
+.hide {
+  display: none;
+}
+
+#dashboard-2 {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+/* ////////// ALL ///////////// */
+
+.budget-dashboard #all ul.list li .entry {
+  width: auto;
+  padding-left: 20px;
+  margin-bottom: 10px;
+  word-wrap: break-word;
+  font-family: "Gilroy Bold";
+}
+
+.budget-dashboard #all ul.list li #edit {
+  visibility: hidden;
+}
+
+.budget-dashboard #all ul.list li.expense {
+  color: rgb(231, 89, 103);
+  opacity: 0.7;
+}
+
+.budget-dashboard #all ul.list li.income {
+  color: #157347;
+  opacity: 0.7;
+}
+
+/* //////// Lists ////////// */
+
+.budget-dashboard .input {
+  position: absolute;
+  display: block;
+  width: auto;
+  bottom: 0;
+  border-top: 1px solid #ccc;
+}
+
+.budget-dashboard .input * {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.budget-dashboard .input input {
+  height: 40px;
+  width: auto;
+  padding-left: 10px;
+  font-size: 1.2em;
+  font-family: "Gilroy";
+  margin: 5px;
+  margin-left: 10px;
+  border-radius: 10px 0 0 10px;
+  border: none;
+}
+
+.budget-dashboard .input input {
+  height: 40px;
+  width: auto;
+  padding-left: 10px;
+  font-size: 1.2em;
+  font-family: "Gilroy";
+  margin: 5px;
+  margin-left: 10px;
+  border-radius: 0 10px 10px 0;
+  border: none;
+}
+
+.budget-dashboard ul {
+  width: auto;
+  height: 285px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-top: 20px;
+  overflow-x: auto;
+}
+
+.budget-dashboard ul.list li {
+  position: relative;
+  font-size: 1em;
+}
+.budget-dashboard ul.list li * {
+  display: inline-block;
+  height: 30px;
+  vertical-align: middle;
+}
+
+.budget-dashboard ul.list li #edit {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  right: 50px;
+  cursor: pointer;
+  background-image: url("icon/edit.png");
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+}
+
+.budget-dashboard ul.list li #delete {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  right: 20px;
+  cursor: pointer;
+  background-image: url("icon/trash.png");
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+}
+
+/* /////// Expenses //////// */
+
+.budget-dashboard #expense ul.list li .entry {
+  width: auto;
+  height: auto;
+  padding-left: 20px;
+  margin-bottom: 10px;
+  word-wrap: break-word;
+  font-family: "Gilroy Bold";
+  color: rgb(231, 89, 103);
+  opacity: 0.7;
+}
+
+/* /////// INCOME //////// */
+
+.budget-dashboard #income ul.list li .entry {
+  width: auto;
+  height: auto;
+  padding-left: 20px;
+  margin-bottom: 10px;
+  word-wrap: break-word;
+  font-family: "Gilroy Bold";
+  color: #157347;
+  opacity: 0.7;
+}
+
+/* /////// WishList //////// */
+
+.budget-dashboard #wish ul.list li .entry {
+  width: auto;
+  height: auto;
+  padding-left: 20px;
+  margin-bottom: 10px;
+  word-wrap: break-word;
+  font-family: "Gilroy Bold";
+  opacity: 0.7;
+}
+
+.budget-dashboard ul.list li #shop {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  right: 20px;
+  cursor: pointer;
+  background-image: url("icon/shopping-cart.png");
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+}
+
+.canShop {
+  color: #fb8500;
+}
