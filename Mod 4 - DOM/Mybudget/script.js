@@ -40,7 +40,7 @@ let balance = 0,
 const Delete = "delete";
 const Edit = "edit";
 
-//LOOK IF THERE IS SAVED DATA IN LOCALSTORAGE
+//LOCALSTORAGE
 ENTRY_LIST = JSON.parse(localStorage.getItem("entry_list")) || [];
 WISH_LIST = JSON.parse(localStorage.getItem("wish_list")) || [];
 updateUI();
