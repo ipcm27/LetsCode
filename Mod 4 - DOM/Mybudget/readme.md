@@ -5,4 +5,6 @@ Na UI fica explícito o Output na cor vermelha e income verde. Além disso, há 
 
 Por último, existe um wishlist, que é sua lista de objetos que você deseja comprar. Você entra com nome e o valor e quando o valor for menor que seu balance o objeto fica amarelo com uma sacolinha, significando que você pode compra-lo.
 
+Ps: Usei o localstorage para gravar as informações.
+
 Este projeto foi feito com Javascript Vanilla,HTML,CSS e Bootsrap 5.
