@@ -35,7 +35,9 @@
 .budget-header {
   display: block;
   width: 95%;
-  background-color: #3794ca;
+  /* background-color: #3794ca; */
+  background-color: #0b5681;
+
   padding-bottom: 15px;
   margin-top: 5px;
   margin-left: 50px;
@@ -95,12 +97,12 @@
   opacity: 0.5;
 }
 .budget-header .account .outcome .outcome-total {
-  color: #bb2d3b;
+  color: #ef959e;
   font-family: "Gilroy Bold";
 }
 
 .budget-header .account .income .income-total {
-  color: #90d8a0;
+  color: #b5ead1;
   font-family: "Gilroy Bold";
 }
 
