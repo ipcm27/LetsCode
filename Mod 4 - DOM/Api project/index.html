@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>FIPE API Project</title>
+  </head>
+  <body>
+    <div class="modal">
+      <p class="message">Pronto pra usar a API FIPE?</p>
+      <p class="message">Escolha um veículo:</p>
+      <div>
+            <input id="carrosInput" type="radio" name="myRadios" value="carros">carros</input>
+            <input id="motosInput" type="radio" name="myRadios" value="motos">motos</input>
+            <input id="caminhoesInput" type="radio" name="myRadios" value="caminhoes">caminhoes</input>
+            <br>
+      </div>
+
+        <p class="message">Marcas:</p>
+        <div class="custom-select">
+            <select id="brandSelect" onchange="getSelectedBrand();">
+              <option value="0">Select brand:</option>
+            </select>
+          </div>
+          <button class="btn" id="btn1">submit</button>
+          
+          <p class="message">Modelos:</p>
+          <div class="custom-select">
+            <select id="modelSelect">
+              <option value="0">Select model:</option>
+            </select>
+          </div>
+          <button class="btn" id="btn2">submit</button>
+
+          <p class="message">Ano:</p>
+          <div class="custom-select">
+            <select id="yearSelect">
+              <option value="0">Select year:</option>
+            </select>
+          </div>
+          <button class="btn" id="btn3">submit</button>
+          <div class="card">
+            <ul>
+            <li id="Valor">valor:</li>
+            <li id="Marca">Marca:</li>
+            <li id="Modelo">Modelos</li>
+            <li id="Ano">Ano:</li>
+            <li id="Combustível">Combustivel</li>
+          </ul>
+          </div>
+         
+        
+          <!-- <button class="btn" class="btn">Yes</button>
+          <button class="btn" class="btn">No</button> -->
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
