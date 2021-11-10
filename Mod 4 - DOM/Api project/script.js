@@ -33,7 +33,7 @@ let printValue, printBrand, printModel, printYear, printGas;
 radios.map((e) => {
   e.addEventListener("click", () => {
     inputTypeVehicle = e.value;
-    console.log(inputTypeVehicle);
+
     getBrand();
     displayBrand();
   });
@@ -78,7 +78,7 @@ const getSelectedBrand = async () => {
     }
   });
 
-  return console.log(`${selectedBrand} ID${idSelectedBrand}`);
+  return idSelectedBrand;
 };
 
 ///////////////////////////// MODELOS \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
@@ -95,11 +95,8 @@ const getModel = async () => {
 
 const displayModel = async function () {
   const modelsObj = await getModel();
-  console.log(modelsObj);
 
   ({ modelos, codigo } = modelsObj);
-
-  console.log(modelos);
 
   $("option").detach();
 
@@ -120,13 +117,9 @@ const getSelectedModel = async () => {
 
   const selectedModel = document.getElementById("modelSelect").value;
 
-  console.log("Selected model: " + selectedModel);
-
   //array é um objeto com  dois arrays: anos e modelos. cada um possui nome e codigo
 
   let { anos: anosArray, modelos: modelosArray } = arrayModels;
-  console.log(modelosArray);
-  console.log(anosArray);
 
   anosArray.map((e) => arrayCodigosAnos.push(e));
 
@@ -135,10 +128,6 @@ const getSelectedModel = async () => {
       idSelectedModel = e.codigo;
     }
   });
-
-  console.log(
-    `https://parallelum.com.br/fipe/api/v1/${inputTypeVehicle}/marcas/${idSelectedBrand}/modelos/${idSelectedModel}/anos`
-  );
 
   return idSelectedModel;
 };
@@ -203,7 +192,6 @@ async function getValue() {
 
 const displayValue = async function () {
   const valueObj = await getValue();
-  console.log(valueObj);
 
   printValue = document.createElement("h6");
   printBrand = document.createElement("h6");
@@ -214,8 +202,8 @@ const displayValue = async function () {
   printValue.innerHTML = valueObj.Valor;
   printBrand.innerHTML = valueObj.Marca;
   printModel.innerHTML = valueObj.Modelo;
-  printYear.innerHTML = valueObj.Ano;
-  printGas.innerHTML = valueObj.Combustível;
+  printYear.innerHTML = valueObj.AnoModelo;
+  printGas.innerHTML = valueObj.Combustivel;
 
   valor.appendChild(printValue);
   marca.appendChild(printBrand);

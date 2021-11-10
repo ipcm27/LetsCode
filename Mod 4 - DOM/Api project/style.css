@@ -37,10 +37,10 @@ body {
 }
 
 .modal {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
   width: auto;
   display: inline-flex;
   flex-direction: column;
@@ -87,6 +87,19 @@ body {
   flex-direction: row;
   justify-content: space-between;
   width: 400px;
+}
+
+li h6 {
+  background-color: #ffd966;
+  font-size: 1.1rem;
+  font-family: "Questrial", sans-serif;
+}
+
+.Modais {
+  display: flexbox;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
 /* ///////////////// INPUTS \\\\\\\\\\\\\\\\\\\ */
