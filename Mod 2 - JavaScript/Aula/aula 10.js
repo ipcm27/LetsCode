@@ -1,6 +1,7 @@
 function Carro(velocidade, marca) {
   this.velocidade = velocidade;
   this.marca = marca;
+  
 }
 
 function acelerar() {
@@ -8,13 +9,25 @@ function acelerar() {
   console.log(velocidade);
 }
 
-function frear() {
-  Carro.velocidade = velocidade - 05;
-  console.log(velocidade);
-}
+Carro.prototype.frear() = function() {
+  this.velocidade =- 05;
+  console.log(`freando!! sua velocidade agora é ${velocidade}`);
+};
+
 
 function buzinar() {
   console.log("bi-bi!");
 }
 
-const Uno = new Carro(0, "Fiat");
+const Uno = new Carro(120, "Fiat");
+
+Uno.frear();
+
+
+// CLASSES
+
+class Personcl{
+  constructor(firstName,birthyear){
+    this.firstName = firstName;
+    this.birthyear = birthyear;
+}
