@@ -1,0 +1,16 @@
+.input {
+  padding: 10px;
+  width: 100%;
+  border: 1px solid #ddd;
+  font-size: 15px;
+  border-radius: 3px;
+}
+
+#form {
+  padding: 0;
+  margin: 0;
+}
+
+input:nth-child(1) {
+  margin-bottom: 10px;
+}
