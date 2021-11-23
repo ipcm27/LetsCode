@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Game #2</title>
+  </head>
+  <body>
+    <main>
+      <section class="player player--0 player--active">
+        <h2 class="name" id="name--0">Player 1</h2>
+        <p class="score" id="score--0">43</p>
+        <div class="current">
+          <p class="current-label">Pontuação Atual</p>
+          <p class="current-score" id="current--0">0</p>
+        </div>
+      </section>
+      <section class="player player--1">
+        <h2 class="name" id="name--1">Player 2</h2>
+        <p class="score" id="score--1">24</p>
+        <div class="current">
+          <p class="current-label">Pontuação Atual</p>
+          <p class="current-score" id="current--1">0</p>
+        </div>
+      </section>
+
+      <img src="dice-5.png" alt="Playing dice" class="dice" />
+      <button class="btn btn--new">🔄 Novo Jogo</button>
+      <button class="btn btn--how">❓ Como jogar</button>
+      <button class="btn btn--roll">🎲 Jogar dado</button>
+      <button class="btn btn--hold">📥 Guardar pontos</button>
+
+      <div class="modal hidden">
+        <button class="close-modal">&times;</button>
+        <h1>Como jogar - Dice game 😍</h1>
+        <p>
+          Dice game consiste jogar o dado e ir somando os valores que cair. A
+          soma vai acumulando no seu valor atual até que você salve, daí será a
+          vez do outro jogador. Se você tirar 1, perde sua soma não salva. Ganha
+          quem estiver com 20 primeiro
+        </p>
+      </div>
+      <div class="overlay hidden"></div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
