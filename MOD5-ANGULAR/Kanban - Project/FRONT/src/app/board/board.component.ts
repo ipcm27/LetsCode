@@ -7,9 +7,8 @@ import {
 import { Board } from '../model/board.model';
 import { Column } from '../model/column.model';
 import { Card } from '../model/card.model';
-import { AppModule } from '../app.module';
 import { CardService } from '../services/card.service';
-import { from } from 'rxjs';
+import { Conteiner } from '../model/conteiner.model';
 
 @Component({
   selector: 'app-board',
@@ -17,9 +16,13 @@ import { from } from 'rxjs';
   styleUrls: ['./board.component.css'],
 })
 export class BoardComponent implements OnInit {
-  cards!: Card[];
-  nomeslista!: String[];
-  columnsArray: Column[] = [];
+  cards: Card[] = [];
+  toDo: Card[] = [];
+  doing: Card[] = [];
+  done: Card[] = [];
+  arrays: Conteiner[] = [];
+  columnNames: string[] = [];
+
   constructor(private service: CardService) {}
 
   ngOnInit(): void {
@@ -27,33 +30,27 @@ export class BoardComponent implements OnInit {
 
     setTimeout(() => {
       this.cards.map((obj) => {
-        let { titulo, conteudo, lista } = obj;
+        let { titulo, conteudo, lista, id } = obj;
 
-        let myColumns = new Column(obj.lista, [
-          new Card(titulo, conteudo, lista),
-        ]);
-        this.columnsArray.push(myColumns);
-      });
-      console.log(this.columnsArray);
-    }, 2000);
-
-    setTimeout(() => {
-      this.columnsArray.map((obj) => {
-        let { name, cards } = obj;
-
-        if ((name = 'to do')) {
+        if (lista.toString() == 'to do' || lista.toString() == 'To do') {
+          this.toDo.push(obj);
+        } else if (lista.toString() == 'doing' || lista.toString() == 'Doing') {
+          this.doing.push(obj);
+        } else if (lista.toString() == 'done' || lista.toString() == 'Done') {
+          this.done.push(obj);
+        } else {
         }
+        this.columnNames.push(lista);
       });
-    }, 3000);
+      this.arrays.push({ name: 'to do', cards: this.toDo });
+      this.arrays.push({ name: 'doing', cards: this.doing });
+      this.arrays.push({ name: 'done', cards: this.done });
+
+      console.log(this.arrays);
+    }, 2500);
   }
 
-  //
-
-  board: Board = new Board('test Board', [
-    // new Column('To do', [new Card('Movies', 'go to the movies',"to do")]),
-    // new Column('doing', [new Card('Studiyng', 'Read Books and watch videos',"doing")]),
-    // new Column('done ', [new Card('Sleep', '8 hours of good sleep',"done")]),
-  ]);
+  board: Board = new Board('test Board');
 
   drop(event: CdkDragDrop<Card[]>) {
     if (event.previousContainer === event.container) {
@@ -72,3 +69,11 @@ export class BoardComponent implements OnInit {
     }
   }
 }
+
+//
+
+// board: Board = new Board('test Board', [
+// new Column('To do', [new Card('Movies', 'go to the movies',"to do")]),
+// new Column('doing', [new Card('Studiyng', 'Read Books and watch videos',"doing")]),
+// new Column('done ', [new Card('Sleep', '8 hours of good sleep',"done")]),
+// ]);
