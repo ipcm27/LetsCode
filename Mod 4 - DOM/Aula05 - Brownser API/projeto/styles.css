@@ -1,0 +1,31 @@
+table {
+    width: 100%;
+  }
+  
+  th {
+    background: rgb(230,230,230);
+  }
+  
+  th, td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid rgb(170,170,170)
+  }
+  
+  button {
+    padding: 5px;
+    margin-bottom: 5px;
+    background-color: royalblue;
+    color: white;
+    border-radius: 5px;
+    font-size: 16px
+  }
+  
+  .right-side-container {
+    float: right;
+  }
+  #alert {
+    font-size: 18px;
+    font-weight: bold;
+    color: royalblue;
+  }

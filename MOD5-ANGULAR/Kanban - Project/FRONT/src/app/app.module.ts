@@ -6,21 +6,26 @@ import { HeaderComponent } from './header/header.component';
 import { BoardComponent } from './board/board.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DragDropModule } from '@angular/cdk/drag-drop';
-import { ConfirmModalComponent } from './confirm-modal/confirm-modal.component';
+
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+import { ModalCreateUpdateComponent } from './board/modal-create-update/modal-create-update.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     BoardComponent,
-    ConfirmModalComponent,
+    ModalCreateUpdateComponent,
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     DragDropModule,
     HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

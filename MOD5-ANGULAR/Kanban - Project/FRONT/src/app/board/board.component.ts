@@ -1,4 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  OnInit,
+  Output,
+  ViewChild,
+} from '@angular/core';
 import {
   CdkDragDrop,
   moveItemInArray,
@@ -9,6 +15,7 @@ import { Column } from '../model/column.model';
 import { Card } from '../model/card.model';
 import { CardService } from '../services/card.service';
 import { Conteiner } from '../model/conteiner.model';
+import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-board',
@@ -22,12 +29,23 @@ export class BoardComponent implements OnInit {
   done: Card[] = [];
   arrays: Conteiner[] = [];
   columnNames: string[] = [];
+  showForm: boolean = false;
+  clickedCardId!: string;
+  clickedCardColumn!: string;
+  cardForm: FormGroup = new FormGroup({
+    id: new FormControl(),
+    titulo: new FormControl(),
+    conteudo: new FormControl(),
+    lista: new FormControl(),
+  });
 
   constructor(private service: CardService) {}
 
   ngOnInit(): void {
-    this.service.list().subscribe((dados) => (this.cards = dados));
+    this.service.getCardFromAPi().subscribe((dados) => (this.cards = dados));
 
+    // transformar isso em um metodo de service e só chamar nomemétodo()
+    // preciso usar ele nas atualizçoes após criar e update
     setTimeout(() => {
       this.cards.map((obj) => {
         let { titulo, conteudo, lista, id } = obj;
@@ -48,6 +66,28 @@ export class BoardComponent implements OnInit {
 
       console.log(this.arrays);
     }, 2500);
+  }
+
+  deleteCard() {
+    // this.service.deleteCard(id);
+  }
+
+  onEditCard() {
+    if (this.showForm == false) {
+      this.showForm = true;
+    } else {
+      this.showForm = false;
+    }
+  }
+
+  editCard() {
+    console.log(this.cardForm);
+    this.service.updateCard(
+      this.cardForm.value.titulo,
+      this.cardForm.value.titulo,
+      this.cardForm.value.conteudo,
+      this.cardForm.value.lista
+    );
   }
 
   board: Board = new Board('test Board');

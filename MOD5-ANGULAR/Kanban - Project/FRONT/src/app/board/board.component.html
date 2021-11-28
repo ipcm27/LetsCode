@@ -11,7 +11,9 @@
   <div class="board-wrapper">
     <div class="board-columns" cdkDropListGroup>
       <div class="board-column" *ngFor="let array of arrays">
-        <div class="column-title">{{ array.name }}</div>
+        <div class="column-title" id="{{ array.name }}">
+          {{ array.name }}
+        </div>
 
         <div
           #todoList="cdkDropList"
@@ -20,7 +22,15 @@
           class="column"
           (cdkDropListDropped)="drop($event)"
         >
-          <div class="card" *ngFor="let card of array.cards" cdkDrag>
+          <div
+            class="card"
+            *ngFor="let card of array.cards"
+            id="{{ card.id }}"
+            cdkDrag
+          >
+            <!-- <div *ngIf="bool">
+                <span id= "{{ card.id }}" [(ngModel)]=“someInput”>
+            </div> -->
             <div class="card_title">
               {{ card.titulo }}
             </div>
@@ -29,10 +39,39 @@
             </div>
 
             <div class="buttons_menu">
-              <button type="button" class="btn btn-secondary material-icons">
+              <button
+                (click)="OnEditCard()"
+                type="button"
+                class="btn btn-secondary material-icons"
+              >
                 edit
               </button>
-              <button type="button" class="btn btn-secondary material-icons">
+
+              <div class="card" *ngIf="showForm">
+                <form [formGroup]="cardForm" (ngSubmit)="editCard()">
+                  <div class="card">
+                    <div class="card_title">
+                      <label for="Titulo">{{ card.titulo }}</label> <br />
+                      <input type="text" id="titulo" formControlName="titulo" />
+                    </div>
+
+                    <div class="card_content">
+                      <label for="Conteudo">{{ card.conteudo }}</label> <br />
+                      <input
+                        type="text"
+                        id="conteudo"
+                        formControlName="conteudo"
+                      />
+                    </div>
+                  </div>
+                </form>
+              </div>
+
+              <button
+                (click)="deleteCard()"
+                type="button"
+                class="btn btn-secondary material-icons"
+              >
                 delete
               </button>
               <button type="button" class="btn btn-secondary material-icons">
@@ -43,10 +82,9 @@
               </button>
             </div>
           </div>
-
-          <button type="button" class="btn btn-success material-icons">
-            add_circle
-          </button>
+          <app-modal-create-update>
+            <span>{{ array.name }}</span>
+          </app-modal-create-update>
         </div>
       </div>
     </div>

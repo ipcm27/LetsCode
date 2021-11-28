@@ -1,0 +1,31 @@
+<button
+  (click)="onCreateCard()"
+  type="button"
+  class="btn btn-success material-icons"
+>
+  add_circle
+</button>
+
+<div class="card" *ngIf="showForm">
+  <form [formGroup]="cardForm" (ngSubmit)="createCard()">
+    <div class="card">
+      <div class="card_title">
+        <label for="Titulo">Titulo</label><br />
+        <input type="text" id="titulo" formControlName="titulo" />
+      </div>
+      <div class="card_content">
+        <label for="Conteudo">Conteudo</label><br />
+        <input type="text" id="conteudo" formControlName="conteudo" />
+      </div>
+      <div class="card_content">
+        <label for="lista">Nome da lista</label><br />
+        <input type="text" id="lista" formControlName="lista" />
+
+        <!-- <ng-content></ng-content> -->
+        <!-- Gostaria de pegar o nome da coluna -Array.name (que está no board component)- através de template,@ViewChild, @input e @OutpUt mas nao consegui  -->
+      </div>
+
+      <button (click)="createCard()" type="submit">CriarCard</button>
+    </div>
+  </form>
+</div>

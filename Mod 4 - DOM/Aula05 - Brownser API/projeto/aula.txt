@@ -1,0 +1,54 @@
+Ao final da aula você aprenderá
+
+
+    * Como realizar uma consulta GET com fetchApi
+    * Como preencher uma tabela com dados da Api
+    * Como verificar dados de API's com o Postman
+    * O que é e para que serve e como utilizar o Async e Await
+    * O que é uma promise e como utilizar 
+    * Consumir uma promise já existente.
+    * Utilizar o promise all
+    * Operações CRUD com LocalStorage Browse, Read, Edit, Add and Delete
+    * Diferença entre Session Storage, Cookies e LocalStorage
+
+    Tópicos adicionais para pesquisa
+
+    * Métodos de request HTTP - https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods
+    * Callback functions - https://www.w3schools.com/js/js_callback.asp
+    * Axios para requisições de Api - https://github.com/axios/axios
+    * Event Loop - https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop
+    * ! Diferença entre session storage, local storage e Cookies - https://medium.com/@desenvolvedormateusbarbosa/qual-%C3%A9-a-diferen%C3%A7a-entre-sessionstorage-localstorage-e-cookies-93b49eea747c
+    * Session Storage documentação - https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage
+    * Cookies Documentação - https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Cookies
+    * Local Storage - https://developer.mozilla.org/pt-BR/docs/Web/API/Window/localStorage
+
+    Apis para praticar
+
+    // Retorna os personagens de StarWars
+    https://swapi.dev/api/people/
+
+    // Retorna os personagens de Harry Potter
+    http://hp-api.herokuapp.com/api/characters
+
+    // Memes do Reddit sobre Doge Coin e coisas aleatorias.
+    https://api.doge-meme.lol/v1/memes/?skip=0&limit=100
+
+    // Lista com infinitas Apis que você pode utilizar para praticar
+    https://github.com/public-apis/public-apis
+
+    // Para criar as suas próprias API's e 
+    praticar tendo suas próprias ideias e poder utilizar outras métodos HTTP,
+    Crie um servidor Fake utilizando o json-server.
+
+    https://www.npmjs.com/package/json-server
+
+    https://github.com/typicode/json-server
+    https://www.fabricadecodigo.com/json-server/
+
+    -----------
+    
+    Locais para praticar e aprender a resolver problemas
+
+    https://www.codewars.com/
+    https://www.codility.com/
+    https://www.hackerrank.com/
