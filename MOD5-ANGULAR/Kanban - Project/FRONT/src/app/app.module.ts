@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { ModalCreateUpdateComponent } from './board/modal-create-update/modal-create-update.component';
+import { CardComponent } from './board/card/card.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { ModalCreateUpdateComponent } from './board/modal-create-update/modal-cr
     HeaderComponent,
     BoardComponent,
     ModalCreateUpdateComponent,
+    CardComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,7 @@
+.material-icons {
+  margin: 0px 2px 0px 2px;
+}
+.buttons_menu {
+  display: flex;
+  flex-direction: row !important;
+}

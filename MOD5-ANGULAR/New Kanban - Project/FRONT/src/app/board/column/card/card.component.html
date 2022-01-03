@@ -1,0 +1,34 @@
+<div class="card" *ngIf="card.lista == column">
+  <a style="cursor: pointer" (click)="onNavigate()" (click)="onOpenMenu()">
+    <div class="card_title">
+      {{ title }}
+    </div>
+    <div class="card_content">
+      {{ content }}
+    </div>
+    <div *ngIf="menuOpen">
+      <app-menu
+        [id]="id"
+        [card]="card"
+        (mudouValor)="onMudouValor($event)"
+      ></app-menu>
+    </div>
+  </a>
+</div>
+<div class="card" *ngIf="editBool">
+  <button type="button" class="btn btn-danger" (click)="closeCard()">
+    Cancelar
+  </button>
+  <form [formGroup]="editForm" (ngSubmit)="updateCard()">
+    <div class="card_content">
+      <label for="titulo">Titulo</label> <br />
+      <input type="text" id="titulo" formControlName="titulo" />
+    </div>
+
+    <div class="card_content">
+      <label for="econteudo">Conteudo</label> <br />
+      <input type="text" id="conteudo" formControlName="conteudo" />
+    </div>
+    <button class="btn btn-success" type="submit">Atualizar Card</button>
+  </form>
+</div>

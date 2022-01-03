@@ -22,15 +22,7 @@
           class="column"
           (cdkDropListDropped)="drop($event)"
         >
-          <div
-            class="card"
-            *ngFor="let card of array.cards"
-            id="{{ card.id }}"
-            cdkDrag
-          >
-            <!-- <div *ngIf="bool">
-                <span id= "{{ card.id }}" [(ngModel)]=“someInput”>
-            </div> -->
+          <div class="card" *ngFor="let card of array.cards" cdkDrag>
             <div class="card_title">
               {{ card.titulo }}
             </div>
@@ -40,32 +32,12 @@
 
             <div class="buttons_menu">
               <button
-                (click)="OnEditCard()"
+                (click)="onEditCard()"
                 type="button"
                 class="btn btn-secondary material-icons"
               >
                 edit
               </button>
-
-              <div class="card" *ngIf="showForm">
-                <form [formGroup]="cardForm" (ngSubmit)="editCard()">
-                  <div class="card">
-                    <div class="card_title">
-                      <label for="Titulo">{{ card.titulo }}</label> <br />
-                      <input type="text" id="titulo" formControlName="titulo" />
-                    </div>
-
-                    <div class="card_content">
-                      <label for="Conteudo">{{ card.conteudo }}</label> <br />
-                      <input
-                        type="text"
-                        id="conteudo"
-                        formControlName="conteudo"
-                      />
-                    </div>
-                  </div>
-                </form>
-              </div>
 
               <button
                 (click)="deleteCard()"
@@ -82,6 +54,24 @@
               </button>
             </div>
           </div>
+
+          <div class="card" *ngIf="showForm">
+            <form [formGroup]="cardForm" (ngSubmit)="editCard()">
+              <div class="card">
+                <div class="card_content">
+                  <label for="Titulo">Titulo</label> <br />
+                  <input type="text" id="titulo" formControlName="titulo" />
+                </div>
+
+                <div class="card_content">
+                  <label for="Conteudo">Conteudo</label> <br />
+                  <input type="text" id="conteudo" formControlName="conteudo" />
+                </div>
+              </div>
+              <button (click)="editCard()" type="submit">CriarCard</button>
+            </form>
+          </div>
+
           <app-modal-create-update>
             <span>{{ array.name }}</span>
           </app-modal-create-update>

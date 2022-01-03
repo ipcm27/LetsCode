@@ -18,13 +18,12 @@
         <input type="text" id="conteudo" formControlName="conteudo" />
       </div>
       <div class="card_content">
-        <label for="lista">Nome da lista</label><br />
-        <input type="text" id="lista" formControlName="lista" />
+        <label for="lista" #ColumnName><ng-content></ng-content></label><br />
+        <input type="hidden" id="lista" formControlName="lista" />
 
-        <!-- <ng-content></ng-content> -->
+        <ng-content></ng-content>
         <!-- Gostaria de pegar o nome da coluna -Array.name (que está no board component)- através de template,@ViewChild, @input e @OutpUt mas nao consegui  -->
       </div>
-
       <button (click)="createCard()" type="submit">CriarCard</button>
     </div>
   </form>

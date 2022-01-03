@@ -1,0 +1,39 @@
+<div class="board-columns">
+  <div class="board-column">
+    <div class="column-title">
+      {{ column }}
+    </div>
+    <div class="column">
+      <app-card
+        *ngFor="let card of cards"
+        [column]="column"
+        [card]="card"
+        (cardChanged)="onCardChanged(card)"
+        (onCreateCard())="onCreateCard()"
+      ></app-card>
+    </div>
+    <button
+      (click)="onCreateCard()"
+      type="button"
+      class="btn btn-success material-icons"
+      id="add"
+    >
+      add_circle
+    </button>
+
+    <div class="card" *ngIf="showForm">
+      <form [formGroup]="cardForm" (ngSubmit)="createCard()">
+        <div class="card_content">
+          <label for="titulo">Titulo</label> <br />
+          <input type="text" id="titulo" formControlName="titulo" />
+        </div>
+
+        <div class="card_content">
+          <label for="conteudo">Conteudo</label> <br />
+          <input type="text" id="conteudo" formControlName="conteudo" />
+        </div>
+        <button class="btn btn-success" type="submit">CriarCard</button>
+      </form>
+    </div>
+  </div>
+</div>

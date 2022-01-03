@@ -3,6 +3,6 @@ export class Card {
     public titulo: string,
     public conteudo: string,
     public lista: string,
-    public id: number
+    public id?: number
   ) {}
 }

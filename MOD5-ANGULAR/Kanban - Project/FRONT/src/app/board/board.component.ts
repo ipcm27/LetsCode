@@ -30,8 +30,9 @@ export class BoardComponent implements OnInit {
   arrays: Conteiner[] = [];
   columnNames: string[] = [];
   showForm: boolean = false;
-  clickedCardId!: string;
-  clickedCardColumn!: string;
+  onChangeId!: string;
+  onChangeColumn!: string;
+
   cardForm: FormGroup = new FormGroup({
     id: new FormControl(),
     titulo: new FormControl(),
@@ -42,7 +43,7 @@ export class BoardComponent implements OnInit {
   constructor(private service: CardService) {}
 
   ngOnInit(): void {
-    this.service.getCardFromAPi().subscribe((dados) => (this.cards = dados));
+    this.service.getCards().subscribe((dados) => (this.cards = dados));
 
     // transformar isso em um metodo de service e só chamar nomemétodo()
     // preciso usar ele nas atualizçoes após criar e update
@@ -81,13 +82,16 @@ export class BoardComponent implements OnInit {
   }
 
   editCard() {
-    console.log(this.cardForm);
-    this.service.updateCard(
-      this.cardForm.value.titulo,
-      this.cardForm.value.titulo,
-      this.cardForm.value.conteudo,
-      this.cardForm.value.lista
-    );
+    console.log('booyah');
+
+    // console.log(this.cardForm);
+    // console.log(this.myColumn);
+    // this.service.updateCard(
+    //   this.cardForm.value.titulo,
+    //   this.cardForm.value.titulo,
+    //   this.cardForm.value.conteudo,
+    //   this.cardForm.value.lista
+    // );
   }
 
   board: Board = new Board('test Board');

@@ -1,0 +1,17 @@
+<!-- <link
+  href="https://fonts.googleapis.com/icon?family=Material+Icons"
+  rel="stylesheet"
+/> -->
+
+<div class="board">
+  <div class="board-bar">
+    <p class="board-name">Board Name</p>
+  </div>
+  <div class="board-wrapper">
+    <app-column
+      *ngFor="let column of columns"
+      [column]="column"
+      [cards]="cards"
+    ></app-column>
+  </div>
+</div>

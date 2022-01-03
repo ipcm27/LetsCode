@@ -1,0 +1,85 @@
+<!-- <app-server></app-server>
+
+ <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <ol>
+          <li>Crie dois novos Componentes (manualmente ou com o CLI): WarningAlert e SuccessAlert</li>
+          <li>Mostre eles um abaixo do outro no AppComponent</li>
+          <li>Mostre uma mensagem de aviso ou sucesso nos componentes</li>
+          <li>Estilize os componentes apropriadamente (talvez algum texto vermelho/verde?)</li>
+        </ol>
+        <p>Use um template interno ou externo e estilos</p>
+        <p>Sinta-se livre para criar mais componentes, construir um dentro do outro ou pratique diferentes tipos de seletores!</p>
+      </div>
+    </div>
+  </div>
+
+  <app-warning-alert></app-warning-alert>
+  <app-success-alert></app-success-alert> -->
+
+<!-- <app-server></app-server>
+  <app-servers></app-servers> -->
+
+<!-- <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <ol>
+            <li>Adicione um input que atualiza a propriedade ('username') via Two-Way-Binding</li>
+            <li>Mostre a propriedade username via Interpolação de String (em um parágrafo abaixo do input)</li>
+            <li>Adicione um botão que pode ser clicado apenas se o username NÃO for uma string vazia</li>
+            <li>Quando clicar no botão, o username deve ser resetado a uma string vazia.</li>
+          </ol>
+      </div>
+    </div>
+  </div>
+
+  <label for="">Username</label>
+  <input type="text" class="form-control" [(ngModel)]="username">
+  <p>{{ username }}</p>
+
+  <button class="btn btn-primary" [disabled]="checkUsername()" (click)="resetUsername()">Resete o usuário</button> -->
+
+<!-- <div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <ol>
+        <li>Adicione um botão que diz: Mostre detalhes</li>
+        <li>
+          Adicione um parágrafo com qualquer conteúdo de sua escolha (ex:
+          'Password = tuna')
+        </li>
+        <li>
+          Alterne a exibição desse parágrafo com o botão criado no primeiro
+          passo
+        </li>
+        <li>
+          Log todos os clicks de botão em um array e mostre esse array abaixo do
+          parágrafo secreto (log um timestamp ou simplesmente um número
+          incrementado)
+        </li>
+        <li>
+          Começando do quinto item, dê a cada futuro log um background azul (via
+          ngStyle) e uma cor branca (ngClass)
+        </li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+<button class="btn btn-primary" (click)="onToggleDetails()">
+  Exibir Detalhes
+</button>
+<p *ngIf="showPassword">
+  ACHOOOU
+  <img src="/assets/tirica.jpg" alt="tirirca" />
+</p>
+<div
+  *ngFor="let logItem of log; let i = index"
+  [ngStyle]="{ backgroundColor: i >= 4 ? 'blue' : 'transparent' }"
+  [ngClass]="{ 'white-text': i >= 4 }"
+>
+  {{ logItem }}
+</div> -->
+
+<app-game-control></app-game-control>

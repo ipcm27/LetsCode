@@ -1,0 +1,26 @@
+.board {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  height: auto;
+  min-width: 0;
+  min-height: 600px;
+}
+
+.board-bar {
+  background-color: #001219;
+  opacity: 0.6;
+  padding: 8px, 15px;
+}
+
+.board-name {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+}
+
+.board-wrapper {
+  display: flex;
+  flex-grow: 1;
+  overflow: auto;
+}

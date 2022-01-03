@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpResponse } from '@angular/common/http';
 import { tap } from 'rxjs/operators';
 import { Card } from '../model/card.model';
 
@@ -11,11 +11,12 @@ export class CardService {
   private readonly API = 'http://0.0.0.0:5000/cards/';
   private headers = {
     Authorization:
-      'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoibGV0c2NvZGUiLCJpYXQiOjE2MzgxMzI3NzksImV4cCI6MTYzODEzNjM3OX0.XcQziRpkwCS0Hs_lTUC8tVzp17rnqjSwkl3bS1WLIPk',
+      'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoibGV0c2NvZGUiLCJpYXQiOjE2MzgyMjk1NzYsImV4cCI6MTYzODIzMzE3Nn0.lwZVUsoImhMlhC1OCUxJkC9zk3E7w3IrVeK3QMsV1u0',
   };
+  tokenResponse!: Object;
   constructor(private http: HttpClient) {}
 
-  getCardFromAPi() {
+  getCards() {
     return this.http
       .get(this.API, {
         headers: this.headers,

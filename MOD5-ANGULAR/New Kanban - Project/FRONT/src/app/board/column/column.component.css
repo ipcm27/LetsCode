@@ -1,0 +1,45 @@
+.board-columns {
+  display: flex;
+  margin: 25px;
+  flex-basis: 0;
+  flex-grow: 1;
+}
+
+.board-column {
+  display: flex;
+
+  flex-grow: 1;
+  flex-direction: column;
+  flex-basis: 0;
+  background-color: gray;
+  opacity: 0.8;
+  min-width: 350px;
+  margin: 25px;
+  padding: 25px;
+  border-radius: 4px;
+}
+
+.column-title {
+  font-size: 20px;
+  font-weight: 800;
+  font-family: "lato", sans-serif;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+#add {
+  width: 50px;
+  justify-content: flex-end;
+}
+
+input {
+  margin-left: 5px;
+}
+
+label {
+  margin: 5px;
+}
+
+.btn {
+  margin: 5px;
+}

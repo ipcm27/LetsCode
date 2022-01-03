@@ -34,7 +34,7 @@ export class ModalCreateUpdateComponent implements OnInit {
     this.service.createCard(
       this.cardForm.value.titulo,
       this.cardForm.value.conteudo,
-      this.cardForm.value.lista.toString()
+      this.cardForm.value.name
     );
   }
 }

@@ -1,0 +1,23 @@
+<!-- <h1 class="teste">Fulaninho Glauberio!!</h1> -->
+
+<button
+  class="btn btn-primary"
+  [disabled]="!permitirAdicaoServidor"
+  (click)="onCreateServer()"
+>
+  Adicionar Servidor
+</button>
+<!-- {{ permitirAdicaoServidor }} -->
+<p [innerText]="permitirAdicaoServidor"></p>
+
+{{ statusAdicaoServidor }}
+
+<input type="text" class="form-control" (input)="onUpdateServerName($event)" />
+
+{{ serverName }}
+
+<input type="text" class="form-control" [(ngModel)]="serverName" />
+
+<div *ngfor="let server of servers">
+  <h1>{{ server }}</h1>
+</div>
